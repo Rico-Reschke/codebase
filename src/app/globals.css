@@ -23,3 +23,38 @@ body {
     text-wrap: balance;
   }
 }
+
+.swiper-pagination-bullets,
+.swiper-pagination-horizontal {
+  display: none !important;
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.swiper-container {
+  height: calc(100vh - 120px);
+  margin: 60px;
+}
+
+.swiper-slide {
+  width: 28vw;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
