@@ -4,9 +4,9 @@ interface ContainerPageProps {}
 
 const stats = [
   { id: 1, name: 'Total Members', value: '5,000+' },
-  { id: 2, name: 'Active Channels', value: '120+' },
-  { id: 3, name: 'Daily Messages', value: '10,000+' },
-  { id: 4, name: 'Events Hosted', value: '300+' },
+  { id: 2, name: 'Active Channels', value: '20+' },
+  { id: 3, name: 'Daily Messages', value: '1,000+' },
+  { id: 4, name: 'Events Hosted', value: '100+' },
 ];
 
 export default function ContainerPage({}: ContainerPageProps) {
