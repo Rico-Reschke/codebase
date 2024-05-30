@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import { Dialog } from '@headlessui/react';
@@ -10,7 +11,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Discord', href: '/discord' },
   { name: 'Team', href: '/team' },
-  { name: 'Support', href: '/support' },
+  { name: 'Rules', href: '/Rules' },
 ];
 
 export default function Home() {
@@ -124,23 +125,17 @@ export default function Home() {
             </h1>
             <div className='mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1'>
               <p className='text-lg leading-8 text-gray-600'>
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt
-                sunt. Qui irure qui lorem cupidatat commodo.
+                Join our vibrant coding community where collaboration meets
+                innovation. Connect with like-minded individuals, share
+                knowledge, and build your skills. Whether you're a beginner or
+                an expert, there's a place for you here.
               </p>
               <div className='mt-10 flex items-center gap-x-6'>
                 <Link
                   href='#'
                   className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                 >
-                  Get started
-                </Link>
-                <Link
-                  href='#'
-                  className='text-sm font-semibold leading-6 text-gray-900'
-                >
-                  Learn more <span aria-hidden='true'>→</span>
+                  Join Our Discord Community
                 </Link>
               </div>
             </div>
