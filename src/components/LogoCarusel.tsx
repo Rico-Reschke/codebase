@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import SwiperCore from 'swiper/core';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -78,10 +77,9 @@ const logos = [
 ];
 
 export default function LogoCarousel() {
-  const router = useRouter();
 
   return (
-    <div className='bg-[#44056E]'>
+    <div className='bg-white border border-t'>
       <Swiper
         className='select-none'
         modules={[Autoplay, Pagination, Navigation]}
@@ -122,8 +120,8 @@ export default function LogoCarousel() {
             >
               <Image
                 src={logo.imgSrc}
-                width={40}
-                height={40}
+                width={1000}
+                height={1000}
                 alt={`Logo ${index}`}
                 className='logo-img'
               />
