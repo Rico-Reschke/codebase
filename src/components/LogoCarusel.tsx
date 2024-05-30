@@ -12,35 +12,67 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const logos = [
   {
-    imgSrc: '/images/partner/binance.svg',
+    imgSrc: '/images/partner/assembly.png',
     targetPath: 'https://www.binance.com',
   },
   {
-    imgSrc: '/images/partner/blockchain.svg',
+    imgSrc: '/images/partner/C.png',
     targetPath: 'https://www.blockchain.com/',
   },
   {
-    imgSrc: '/images/partner/metamask.svg',
+    imgSrc: '/images/partner/C1.png',
     targetPath: 'https://metamask.io/',
   },
   {
-    imgSrc: '/images/partner/kraken.svg',
+    imgSrc: '/images/partner/C2.png',
     targetPath: 'https://www.kraken.com/',
   },
   {
-    imgSrc: '/images/partner/coinbase.svg',
+    imgSrc: '/images/partner/F1.png',
     targetPath: 'https://www.coinbase.com/',
   },
   {
-    imgSrc: '/images/partner/ledger.svg',
+    imgSrc: '/images/partner/go.png',
     targetPath: 'https://www.ledger.com/',
   },
   {
-    imgSrc: '/images/partner/crypto.com.svg',
+    imgSrc: '/images/partner/html.png',
     targetPath: 'https://crypto.com/',
   },
   {
-    imgSrc: '/images/partner/trezor.svg',
+    imgSrc: '/images/partner/java.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/javascript.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/kotlin.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/lua.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/php.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/python.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/ruby.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/rust.png',
+    targetPath: 'https://trezor.io/',
+  },
+  {
+    imgSrc: '/images/partner/typescript.png',
     targetPath: 'https://trezor.io/',
   },
 ];
