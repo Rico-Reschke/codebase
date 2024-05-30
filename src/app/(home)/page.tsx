@@ -12,8 +12,8 @@ export default function Home() {
       <HeroSection />
       <DekoSection />
       <MapSection />
-      <LogoCarousel />
       <StatsSection />
+      <LogoCarousel />
     </>
   );
 }

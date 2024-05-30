@@ -17,7 +17,7 @@ export default function ContainerPage({}: ContainerPageProps) {
           <p className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
             Trusted by thousands of customers&nbsp;worldwide
           </p>
-          <p className='mt-6 text-lg leading-8 text-gray-800'>
+          <p className='mt-6 text-lg leading-8 text-gray-700'>
             Our exchange platform simplifies currency exchange through low fees,
             high availability, and the trust of thousands of users worldwide. We
             offer traders and investors a solid foundation for secure and
