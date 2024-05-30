@@ -77,7 +77,6 @@ const logos = [
 ];
 
 export default function LogoCarousel() {
-
   return (
     <div className='bg-white border border-t'>
       <Swiper
@@ -115,7 +114,7 @@ export default function LogoCarousel() {
         {logos.map((logo, index) => (
           <SwiperSlide key={index}>
             <div
-              className='ml-5 transition-transform hover:scale-110'
+              className='flex logo-container justify-center items-center ml-5 transition-transform hover:scale-110'
               onClick={() => (window.location.href = logo.targetPath)}
             >
               <Image
