@@ -83,10 +83,10 @@ export default function LogoCarousel() {
         className='select-none'
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={0}
-        slidesPerView={7}
+        slidesPerView={11}
         loop={true}
         onInit={(swiper) => {}}
-        speed={15000}
+        speed={5555}
         grabCursor={true}
         freeMode={true}
         autoplay={{
@@ -102,11 +102,11 @@ export default function LogoCarousel() {
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 7,
+            slidesPerView: 10,
             spaceBetween: 40,
           },
         }}
