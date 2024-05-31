@@ -5,6 +5,7 @@ import { HeroSection } from '@/components/HeroSection';
 import LogoCarousel from '@/components/LogoCarusel';
 import { MapSection } from '@/components/MapSection';
 import StatsSection from '@/components/StatsSection';
+import SupportSection from '@/components/SupportSection';
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <HeroSection />
       <DekoSection />
       <MapSection />
-      <StatsSection />
+      <SupportSection />
       <LogoCarousel />
+      <StatsSection />
     </>
   );
 }
