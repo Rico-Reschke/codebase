@@ -4,9 +4,9 @@ import { JSX, SVGProps } from 'react';
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-    { name: 'Discord', href: '#' },
-    { name: 'Team', href: '#' },
-    { name: 'Rules', href: '#' },
+    { name: 'Discord', href: '/discord' },
+    { name: 'Team', href: '/team' },
+    { name: 'Rules', href: '/rules' },
   ],
   social: [
     {
