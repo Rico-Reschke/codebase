@@ -12,6 +12,7 @@ const navigation = [
   { name: 'Team', href: '/team' },
   { name: 'Rules', href: '/rules' },
 ];
+
 interface HeroSectionProps {}
 
 export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
