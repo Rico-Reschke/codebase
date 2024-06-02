@@ -20,7 +20,7 @@ export default function DekoSection({}: ContainerPageProps) {
               <div className='relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20'></div>
             </div>
             <h1 className='mt-10 max-w-lg text-4xl font-bold tracking-tight text-black sm:text-6xl'>
-              Welcome to Our Discord Community
+              We’re changing the way people connect.
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
               Enhance your Discord experience with us. Discover community,
