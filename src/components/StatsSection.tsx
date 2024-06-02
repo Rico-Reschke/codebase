@@ -15,14 +15,14 @@ export default function ContainerPage({}: ContainerPageProps) {
       <div className='relative mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0 lg:max-w-2xl'>
           <p className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
-            Trusted by thousands of customers&nbsp;worldwide
+            Trusted by thousands of developers&nbsp;worldwide
           </p>
           <p className='mt-6 text-lg leading-8 text-gray-700'>
-            Our exchange platform simplifies currency exchange through low fees,
-            high availability, and the trust of thousands of users worldwide. We
-            offer traders and investors a solid foundation for secure and
-            efficient transactions. Discover now how we are redefining currency
-            exchange.
+            Our coding community fosters growth and collaboration through a
+            wealth of resources, expert support, and a network of thousands of
+            developers worldwide. We provide programmers and tech enthusiasts
+            with a vibrant environment for sharing knowledge and advancing their
+            skills. Discover how we are transforming the coding landscape.
           </p>
         </div>
         <dl className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-black sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4'>
