@@ -23,6 +23,9 @@ const initialRules = [
   {
     text: '✉️ 7. Avoid sending direct messages to administrators unless absolutely necessary.',
   },
+];
+
+const additionalRules = [
   {
     text: "🛡️ 8. It is forbidden to share anyone's personal information without their explicit permission; violations will lead to immediate expulsion.",
   },
@@ -32,9 +35,6 @@ const initialRules = [
   {
     text: '🚨 10. Refrain from engaging in or promoting hate speech, political or religious debates, or sharing content that is piratical, sexual, NSFW, or dubious.',
   },
-];
-
-const additionalRules = [
   {
     text: '🎮 11. Honor copyright laws; avoid distributing or endorsing pirated games, software, or media.',
   },
@@ -78,9 +78,13 @@ export default function RulesPage({}: RulesPageProps) {
               </ul>
             </div>
           ))}
-          {showMore &&
-            additionalRules.map(({ text }, index) => (
-              <div key={index} className='pl-5 text-white mt-5'>
+          <div
+            className={`pl-5 text-white mt-5 overflow-hidden transition-max-height duration-500 ease-in-out ${
+              showMore ? 'max-h-screen' : 'max-h-0'
+            }`}
+          >
+            {additionalRules.map(({ text }, index) => (
+              <div key={index} className='mt-5'>
                 <ul className=''>
                   <li className='mt-2 flex items-start'>
                     <span className='ml-2 text-lg'>{text}</span>
@@ -88,10 +92,11 @@ export default function RulesPage({}: RulesPageProps) {
                 </ul>
               </div>
             ))}
+          </div>
           <div className='pl-5 text-white mt-5'>
             <button
               onClick={() => setShowMore(!showMore)}
-              className='bg-[#83b7e4] text-white px-4 py-2 rounded-md'
+              className='bg-[#83b7e4] text-white px-4 py-2 rounded-md transition-transform duration-500 transform hover:scale-105'
             >
               {showMore ? 'Show Less' : 'Read More'}
             </button>
