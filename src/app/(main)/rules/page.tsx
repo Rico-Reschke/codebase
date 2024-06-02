@@ -1,10 +1,10 @@
 'use client';
 
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { useState } from 'react';
 
 interface RulesPageProps {}
 
-const rules = [
+const initialRules = [
   {
     text: "😃 1. Adherence to Discord's official guidelines is required. Consult them here: https://discord.com/guidelines.",
   },
@@ -34,20 +34,43 @@ const rules = [
   },
 ];
 
+const additionalRules = [
+  {
+    text: '🎮 11. Honor copyright laws; avoid distributing or endorsing pirated games, software, or media.',
+  },
+  {
+    text: '🚫 12. Harassment, bullying, or any form of discrimination, including but not limited to racism and sexism, is strictly forbidden.',
+  },
+  {
+    text: '🔞 13. Ensure all shared content is suitable for all ages, particularly avoiding violent or explicit material, especially around minors.',
+  },
+  {
+    text: '🔕 14. Abide by the specific rules and guidelines of each channel.',
+  },
+  {
+    text: '💬 15. Channels should be used for their intended purposes; maintain topic relevance in discussions.',
+  },
+  {
+    text: '🎤 16. When using voice channels, be considerate of others. Keep background noise, music, or any other disturbances to a minimum.',
+  },
+  {
+    text: '👥 17. Impersonation of any members or staff is strictly prohibited.',
+  },
+  {
+    text: '🔗 18. Do not share misleading links or disseminate false information.',
+  },
+];
+
 export default function RulesPage({}: RulesPageProps) {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className='bg-white h-screen flex items-center justify-center'>
       <div className='mx-auto w-full md:max-w-2xl'>
         <div className='rounded-lg border-2 border-[#83b7e4] bg-[#2272b7] p-6 shadow-2xl shadow-[#2272b7]'>
           <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>Rules</h2>
-          {rules.map(({ text }, index) => (
-            <div
-              key={index}
-              className={`pl-5 text-white ${index === 5 ? 'mt-5' : ''}`}
-            >
-              <p className='font-semibold'>
-                {index === 0 && 'We will process your transaction even if you'}
-              </p>
+          {initialRules.map(({ text }, index) => (
+            <div key={index} className='pl-5 text-white mt-5'>
               <ul className=''>
                 <li className='mt-2 flex items-start'>
                   <span className='ml-2 text-lg'>{text}</span>
@@ -55,6 +78,24 @@ export default function RulesPage({}: RulesPageProps) {
               </ul>
             </div>
           ))}
+          {showMore &&
+            additionalRules.map(({ text }, index) => (
+              <div key={index} className='pl-5 text-white mt-5'>
+                <ul className=''>
+                  <li className='mt-2 flex items-start'>
+                    <span className='ml-2 text-lg'>{text}</span>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          <div className='pl-5 text-white mt-5'>
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className='bg-[#83b7e4] text-white px-4 py-2 rounded-md'
+            >
+              {showMore ? 'Show Less' : 'Read More'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
