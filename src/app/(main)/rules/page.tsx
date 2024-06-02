@@ -48,12 +48,10 @@ const tips = [
 
 export default function RulesPage({}: RulesPageProps) {
   return (
-    <div className='bg-white'>
-      <div className='mx-auto mt-20 w-full md:max-w-2xl'>
-        <div className='rounded-lg border-2 border-[#A324FF] bg-[#520D80] p-6 shadow-2xl shadow-[#A324FF]'>
-          <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>
-            Useful tips to know
-          </h2>
+    <div className='bg-white h-screen flex items-center justify-center'>
+      <div className='mx-auto w-full md:max-w-2xl'>
+        <div className='rounded-lg border-2 border-[#83b7e4] bg-[#2272b7] p-6 shadow-2xl shadow-[#2272b7]'>
+          <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>Rules</h2>
           {tips.map(({ icon: Icon, text, color }, index) => (
             <div
               key={index}
