@@ -1,47 +1,37 @@
 'use client';
 
-import {
-  AiFillCheckCircle,
-  AiFillCloseCircle,
-  AiFillInfoCircle,
-} from 'react-icons/ai';
+import { AiFillCloseCircle, AiFillInfoCircle } from 'react-icons/ai';
 
 interface RulesPageProps {}
 
-const tips = [
+const rules = [
   {
-    icon: AiFillCheckCircle,
-    text: 'Send a deposit in a wrong network',
+    text: "😃 1. Adherence to Discord's official guidelines is required. Consult them here: https://discord.com/guidelines.",
     color: 'text-green-500',
   },
   {
-    icon: AiFillCheckCircle,
-    text: 'Create a transaction with a wrong coin',
+    text: '🙋 3. Assistance is freely given. Refrain from pinging for quicker replies. Pose questions directly, using resources like https://dontasktoask.com/ and https://stackoverflow.com/help/how-to-ask for guidance.',
     color: 'text-green-500',
   },
   {
-    icon: AiFillCheckCircle,
-    text: 'Select an amount and then send a different one',
+    text: '📵 4. Do not record or transmit video (including screen sharing and webcams) or audio (voice chats) on this server.',
     color: 'text-green-500',
   },
   {
-    icon: AiFillCheckCircle,
-    text: 'Send more than one deposit for the same transaction',
+    text: '📣 5. We prohibit any form of third-party advertising or personal promotions.',
     color: 'text-green-500',
   },
   {
-    icon: AiFillCheckCircle,
-    text: 'Send a deposit long after the exchange was created or completed',
+    text: '👮 6. Our moderation team reserves the right to intervene as necessary, even in cases not explicitly covered by the rules.',
     color: 'text-green-500',
   },
   {
-    icon: AiFillCloseCircle,
-    text: 'Send a deposit for a fixed-rate exchange after the rate expires, provided that the rate declines over this timeframe',
+    text: '✉️ 7. Avoid sending direct messages to administrators unless absolutely necessary.',
     color: 'text-red-600',
   },
   {
     icon: AiFillCloseCircle,
-    text: 'Make a transaction using the wrong contract address',
+    text: "🛡️ 8. It is forbidden to share anyone's personal information without their explicit permission; violations will lead to immediate expulsion.",
     color: 'text-red-600',
   },
 ];
@@ -52,22 +42,16 @@ export default function RulesPage({}: RulesPageProps) {
       <div className='mx-auto w-full md:max-w-2xl'>
         <div className='rounded-lg border-2 border-[#83b7e4] bg-[#2272b7] p-6 shadow-2xl shadow-[#2272b7]'>
           <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>Rules</h2>
-          {tips.map(({ icon: Icon, text, color }, index) => (
+          {rules.map(({ icon: Icon, text, color }, index) => (
             <div
               key={index}
               className={`pl-5 text-white ${index === 5 ? 'mt-5' : ''}`}
             >
               <p className='font-semibold'>
                 {index === 0 && 'We will process your transaction even if you'}
-                {index === 5 &&
-                  'We will not be able to proceed with the transaction on the initial terms if you'}
               </p>
               <ul className=''>
                 <li className='mt-2 flex items-start'>
-                  <Icon
-                    className={`h-6 w-6 flex-shrink-0 ${color}`}
-                    size={22}
-                  />
                   <span className='ml-2 text-lg'>{text}</span>
                 </li>
               </ul>
