@@ -65,41 +65,45 @@ export default function RulesPage({}: RulesPageProps) {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className='bg-white h-screen flex items-center justify-center'>
-      <div className='mx-auto w-full md:max-w-2xl'>
-        <div className='rounded-lg border-2 border-[#83b7e4] bg-[#2272b7] p-6 shadow-2xl shadow-[#2272b7]'>
-          <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>Rules</h2>
-          {initialRules.map(({ text }, index) => (
-            <div key={index} className='pl-5 text-white mt-5'>
-              <ul className=''>
-                <li className='mt-2 flex items-start'>
-                  <span className='ml-2 text-lg'>{text}</span>
-                </li>
-              </ul>
-            </div>
-          ))}
-          <div
-            className={`pl-5 text-white mt-5 overflow-hidden transition-max-height duration-500 ease-in-out ${
-              showMore ? 'max-h-screen' : 'max-h-0'
-            }`}
-          >
-            {additionalRules.map(({ text }, index) => (
-              <div key={index} className='mt-5'>
-                <ul className=''>
+    <div className='bg-white min-h-screen flex flex-col'>
+      {/* Outer container with min-h-screen to ensure full height and flex-col for vertical layout */}
+      <div className='flex-grow flex items-center justify-center'>
+        {/* flex-grow ensures this section takes up all available space, flex for centering */}
+        <div className='mx-auto w-full md:max-w-2xl'>
+          <div className='rounded-lg border-2 border-[#83b7e4] bg-[#2272b7] p-6 shadow-2xl shadow-[#2272b7]'>
+            <h2 className='mb-5 pl-5 text-2xl font-bold text-white'>Rules</h2>
+            {initialRules.map(({ text }, index) => (
+              <div key={index} className='pl-5 text-white mt-5'>
+                <ul>
                   <li className='mt-2 flex items-start'>
                     <span className='ml-2 text-lg'>{text}</span>
                   </li>
                 </ul>
               </div>
             ))}
-          </div>
-          <div className='pl-5 text-white mt-5'>
-            <button
-              onClick={() => setShowMore(!showMore)}
-              className='bg-[#83b7e4] text-white px-4 py-2 rounded-md transition-transform duration-500 transform hover:scale-105'
+            <div
+              className={`pl-5 text-white mt-5 overflow-hidden transition-max-height duration-500 ease-in-out ${
+                showMore ? 'max-h-screen' : 'max-h-0'
+              }`}
             >
-              {showMore ? 'Show Less' : 'Read More'}
-            </button>
+              {additionalRules.map(({ text }, index) => (
+                <div key={index} className='mt-5'>
+                  <ul>
+                    <li className='mt-2 flex items-start'>
+                      <span className='ml-2 text-lg'>{text}</span>
+                    </li>
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className='pl-5 text-white mt-5'>
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className='bg-[#83b7e4] text-white px-4 py-2 rounded-md transition-transform duration-500 transform hover:scale-105'
+              >
+                {showMore ? 'Show Less' : 'Read More'}
+              </button>
+            </div>
           </div>
         </div>
       </div>
