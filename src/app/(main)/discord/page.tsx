@@ -1,5 +1,5 @@
 'use client';
-
+//
 interface DiscordPageProps {}
 
 export default function DiscordPage({}: DiscordPageProps) {
