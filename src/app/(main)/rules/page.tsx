@@ -60,7 +60,7 @@ const additionalRules = [
     text: '🔗 18. Do not share misleading links or disseminate false information.',
   },
 ];
-//
+
 export default function RulesPage({}: RulesPageProps) {
   const [showMore, setShowMore] = useState(false);
 
