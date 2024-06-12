@@ -1,11 +1,11 @@
 'use client';
 
-import DekoSection from '@/components/DekoSection';
-import { HeroSection } from '@/components/HeroSection';
 import LogoCarousel from '@/components/LogoCarusel';
-import { MapSection } from '@/components/MapSection';
-import StatsSection from '@/components/StatsSection';
-import SupportSection from '@/components/SupportSection';
+import DekoSection from '@/pages/Home/DekoSection';
+import { HeroSection } from '@/pages/Home/HeroSection';
+import { MapSection } from '@/pages/Home/MapSection';
+import StatsSection from '@/pages/Home/StatsSection';
+import SupportSection from '@/pages/Home/SupportSection';
 
 export default function Home() {
   return (
