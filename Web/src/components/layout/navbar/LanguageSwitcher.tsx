@@ -14,32 +14,32 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({}) => {
   const languageOptions = [
     {
       key: "us",
-      imagePath: "/images/locales/us.png",
+      imagePath: "/locales/us.png",
       label: "English (US)",
     },
     {
       key: "es",
-      imagePath: "/images/locales/es.png",
+      imagePath: "/locales/es.png",
       label: "Español",
     },
     {
       key: "cn",
-      imagePath: "/images/locales/cn.png",
+      imagePath: "/locales/cn.png",
       label: "中文",
     },
     {
       key: "de",
-      imagePath: "/images/locales/de.png",
+      imagePath: "/locales/de.png",
       label: "Deutsch",
     },
     {
       key: "ar",
-      imagePath: "/images/locales/ar.png",
+      imagePath: "/locales/ar.png",
       label: "العربية",
     },
     {
       key: "ru",
-      imagePath: "/images/locales/ru.png",
+      imagePath: "/locales/ru.png",
       label: "Русский",
     },
   ];
