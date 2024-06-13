@@ -22,7 +22,7 @@ export const MainNavigationLinks = ({
           {item.name}
         </span>
         <span
-          className={`absolute bottom-0 left-0 h-0.5 w-0 bg-[#A324FF] ${currentPath === item.href ? "w-full" : "bg-black"} ${currentPath !== item.href ? "transition-all duration-300 group-hover:w-full" : ""}`}
+          className={`absolute bottom-0 left-0 h-0.5 w-0 bg-[#176EB5] ${currentPath === item.href ? "w-full" : "bg-black"} ${currentPath !== item.href ? "transition-all duration-300 group-hover:w-full" : ""}`}
         ></span>
       </Link>
     ))}

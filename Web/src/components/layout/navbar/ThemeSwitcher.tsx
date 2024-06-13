@@ -2,21 +2,16 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import { AiOutlineBgColors } from 'react-icons/ai';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 interface ThemeSwitcherProps {}
 
 export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
-  const [theme, setTheme] = useState('original');
+  const [theme, setTheme] = useState('light');
 
   const changeTheme = (newTheme: any) => setTheme(newTheme);
 
   const themeOptions = [
-    {
-      key: 'original',
-      icon: <AiOutlineBgColors className='h-5 w-5 text-gray-700' />,
-    },
     { key: 'light', icon: <RiSunFill className='h-5 w-5 text-gray-700' /> },
     { key: 'dark', icon: <RiMoonFill className='h-5 w-5 text-gray-700' /> },
   ];
@@ -27,12 +22,10 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
 
   const ThemeIcon = () => {
     switch (theme) {
-      case 'light':
-        return <RiSunFill className='h-6 w-6' />;
       case 'dark':
         return <RiMoonFill className='h-6 w-6' />;
       default:
-        return <AiOutlineBgColors className='h-6 w-6' />;
+        return <RiSunFill className='h-6 w-6' />;
     }
   };
 
@@ -62,7 +55,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({}) => {
                     onClick={() => {
                       setTimeout(() => {
                         changeTheme(option.key);
-                      }, 70); // Delayed the change by 1 second
+                      }, 70);
                     }}
                   >
                     {option.icon}
