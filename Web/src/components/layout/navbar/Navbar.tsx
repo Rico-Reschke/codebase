@@ -58,14 +58,14 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                     width={200}
                     height={200}
                     className='block h-8 w-auto lg:hidden'
-                    src='/images/nslogo.png'
+                    src='/logo.png'
                     alt='Narco Service'
                   />
                   <Image
                     width={200}
                     height={200}
                     className='hidden h-8 w-auto lg:block'
-                    src='/images/nslogo.png'
+                    src='/logo.png'
                     alt='Narco Service'
                   />
                 </div>
