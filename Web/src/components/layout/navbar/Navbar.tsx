@@ -69,9 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                     alt='Narco Service'
                   />
                 </div>
-                <div className='hidden sm:flex sm:space-x-8'>
-                  <MainNavigationLinks currentPath={pathName || ''} />
-                </div>
+                <MainNavigationLinks currentPath={pathName || ''} />
               </div>
               <div className='absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 md:ml-0'>
                 <LanguageSwitcher />
