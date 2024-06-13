@@ -1,8 +1,9 @@
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footer/Footer';
+import Navbar from '@/components/layout/navbar/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/layout/Navbar';
+import { ToastProvider } from '@/context/ToastContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,11 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <ToastProvider>
+        <body className={inter.className}>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </ToastProvider>
     </html>
   );
 }
