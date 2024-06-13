@@ -22,9 +22,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
     <Disclosure as='nav' className='bg-transparent'>
       {({ open }) => (
-        <div>
+        <div className='absolute inset-x-0 top-0 z-50'>
           <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
-            <div className='relative flex h-16 justify-between'>
+            <div className='relative flex h-16 items-center justify-between'>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
                 {/* Mobile menu button */}
                 <Disclosure.Button className='ml-2 inline-flex justify-center transition duration-200 ease-in-out hover:scale-125'>
@@ -69,7 +69,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                     alt='Narco Service'
                   />
                 </div>
-                <MainNavigationLinks currentPath={pathName || ''} />
+                <div className='hidden sm:flex sm:space-x-8'>
+                  <MainNavigationLinks currentPath={pathName || ''} />
+                </div>
               </div>
               <div className='absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 md:ml-0'>
                 <LanguageSwitcher />
@@ -78,7 +80,20 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
               </div>
             </div>
           </div>
-          <MobileAuthSwitcher />
+          <Disclosure.Panel className='sm:hidden'>
+            <div className='space-y-1 px-2 pt-2 pb-3'>
+              <MainNavigationLinks currentPath={pathName || ''} />
+            </div>
+            <div className='border-t border-gray-200 pt-4 pb-3'>
+              <div className='flex items-center px-5'>
+                <div className='ml-3'>
+                  <div className='text-base font-medium leading-none text-white'>
+                    <MobileAuthSwitcher />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Disclosure.Panel>
         </div>
       )}
     </Disclosure>
