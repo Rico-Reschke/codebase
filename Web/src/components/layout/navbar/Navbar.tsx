@@ -12,7 +12,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
 import { RenderOptions, Spin } from '../../ui/burgermenu';
-
+//
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
