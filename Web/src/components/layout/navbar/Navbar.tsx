@@ -1,5 +1,5 @@
 'use client';
-//
+
 import {
   MainAuthSwitcher,
   MobileAuthSwitcher,
